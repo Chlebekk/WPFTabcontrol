@@ -20,15 +20,24 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<Produkt> produkty { get; set; }
         public List<String> Strings { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            przygotujDane();
             Strings = new List<String>();
             Strings.Add("first");
             Strings.Add("seconst");
             Strings.Add("thirst");
             DataContext = this;
+        }
+        private void przygotujDane()
+        {
+            produkty = new List<Produkt>();
+            produkty.Add(new Produkt("Woda", 10, "mokra"));
+            produkty.Add(new Produkt("Woda", 10, "sucha"));
+            produkty.Add(new Produkt("Woda", 10, "niewiem"));
         }
     }
 }

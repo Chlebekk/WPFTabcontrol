@@ -19,7 +19,7 @@
                         <Label Content="c"/>
                     </ItemsControl>
                     <ItemsControl ItemsSource="{Binding Strings}"/>
-                    <ItemsControl x:Name="lista3">
+                    <ItemsControl ItemsSource="{Binding produkty}">
                         
                     </ItemsControl>
                 </StackPanel>
