@@ -8,10 +8,15 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TabControl>
-            <TabItem>
-                <TabItem.Header>
-                    <Rectangle Width="8" Height="8" Fill="Black"></Rectangle>
+            <TabItem >
+                <TabItem.Header >
+                    <Rectangle Width="8" Height="8" Fill="Black" ></Rectangle>
                 </TabItem.Header>
+                <ItemsControl>
+                    <Label Content="a"/>
+                    <Label Content="b"/>
+                    <Label Content="c"/>
+                </ItemsControl>
             </TabItem>
             <TabItem Header="ListBox">
 
