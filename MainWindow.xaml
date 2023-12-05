@@ -9,20 +9,27 @@
     <Grid>
         <TabControl>
             <TabItem >
-                <TabItem.Header >
+                <TabItem.Header>
                     <Rectangle Width="8" Height="8" Fill="Black" ></Rectangle>
                 </TabItem.Header>
-                <ItemsControl>
-                    <Label Content="a"/>
-                    <Label Content="b"/>
-                    <Label Content="c"/>
-                </ItemsControl>
+                <StackPanel>
+                    <ItemsControl>
+                        <Label Content="a"/>
+                        <Label Content="b"/>
+                        <Label Content="c"/>
+                    </ItemsControl>
+                    <ItemsControl ItemsSource="{Binding Strings}"/>
+                    <ItemsControl x:Name="lista3">
+                        
+                    </ItemsControl>
+                </StackPanel>
             </TabItem>
             <TabItem Header="ListBox">
 
             </TabItem>
             <TabItem Header="ListView"></TabItem>
             <TabItem Header="DataGrid"></TabItem>
+        
         </TabControl>
     </Grid>
 </Window>

@@ -20,9 +20,15 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<String> Strings { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            Strings = new List<String>();
+            Strings.Add("first");
+            Strings.Add("seconst");
+            Strings.Add("thirst");
+            DataContext = this;
         }
     }
 }
