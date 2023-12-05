@@ -7,29 +7,72 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TabControl>
-            <TabItem >
+        <TabControl SelectedIndex="2"
+                    TabStripPlacement="Bottom">
+            <TabItem>
                 <TabItem.Header>
-                    <Rectangle Width="8" Height="8" Fill="Black" ></Rectangle>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Width="10"
+                                   Height="10"
+                                   Fill="Black"/>
+                        <Label Content=" ContentControl"/>
+                    </StackPanel>
                 </TabItem.Header>
                 <StackPanel>
                     <ItemsControl>
-                        <Label Content="a"/>
-                        <Label Content="b"/>
-                        <Label Content="c"/>
+                        <Label>Pierwszy element</Label>
+                        <Label>Drugi element</Label>
+                        <Label>Trzeci element</Label>
                     </ItemsControl>
-                    <ItemsControl ItemsSource="{Binding Strings}"/>
-                    <ItemsControl ItemsSource="{Binding produkty}">
-                        
+                    <ItemsControl ItemsSource="{Binding Teksty}">
+
+                    </ItemsControl>
+                    <ItemsControl
+                        x:Name="lista3">
+
+                    </ItemsControl>
+                    <Separator/>
+                    <ItemsControl ItemsSource="{Binding Path = Produkty}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="{Binding Nazwa}"/>
+                                    <TextBlock Text="{Binding Cena}" 
+                                               Margin="10"/>
+                                    <TextBlock Text="{Binding Opis}"
+                                               Foreground="Brown"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
                     </ItemsControl>
                 </StackPanel>
             </TabItem>
             <TabItem Header="ListBox">
+                <StackPanel>
+                    <ListBox ItemsSource="{Binding Strings}"/>
+                    <Separator/>
+                    <ListBox ItemsSource="{Binding Produkty}" SelectedItem="{Binding ZaznaczonyProdukt}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="{Binding Nazwa}"/>
+                                    <TextBlock Text="{Binding Cena}" 
+                                               Margin="10"/>
+                                    <TextBlock Text="{Binding Opis}"
+                                               Foreground="Brown"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="ListView">
 
             </TabItem>
-            <TabItem Header="ListView"></TabItem>
-            <TabItem Header="DataGrid"></TabItem>
-        
+            <TabItem Header="DataGrid">
+
+            </TabItem>
         </TabControl>
+
     </Grid>
 </Window>

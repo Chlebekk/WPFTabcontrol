@@ -20,7 +20,7 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<Produkt> produkty { get; set; }
+        public List<Produkt> Produkty { get; set; }
         public List<String> Strings { get; set; }
         public MainWindow()
         {
@@ -34,10 +34,10 @@ namespace WpfApp1
         }
         private void przygotujDane()
         {
-            produkty = new List<Produkt>();
-            produkty.Add(new Produkt("Woda", 10, "mokra"));
-            produkty.Add(new Produkt("Woda", 10, "sucha"));
-            produkty.Add(new Produkt("Woda", 10, "niewiem"));
+            Produkty = new List<Produkt>();
+            Produkty.Add(new Produkt("Woda", 10, "mokra"));
+            Produkty.Add(new Produkt("Woda", 10, "sucha"));
+            Produkty.Add(new Produkt("Woda", 10, "niewiem"));
         }
     }
 }
